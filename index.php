@@ -2,15 +2,6 @@
 include "cabecera.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central de Autobuses</title>
-</head>
-<body>
-
 <header>
     <h1 class="titulo">Bienvenido a la Central de Autobuses</h1>
     <p>Tu punto de partida para viajes increíbles</p>
@@ -30,7 +21,16 @@ include "cabecera.php";
 <section id="servicios">
     <h2>Nuestros Servicios</h2>
     <p>Ofrecemos una variedad de servicios para que tu viaje sea seguro y placentero.</p>
-    <!-- Agrega detalles sobre los servicios ofrecidos -->
+    <div class="servicio">
+        <div><img class="icono" src="images/estrellas.png" alt=""></div>
+        <h3>Premium</h3>
+        <p>Descripción del Servicio 1.</p>
+    </div>
+    <div class="servicio">
+        <div><img class="icono" src="images/corazones.png" alt=""></div>
+        <h3>Estandar</h3>
+        <p>Descripción del Servicio 2.</p>
+    </div>
 </section>
 
 <section id="contactos">

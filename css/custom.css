@@ -30,8 +30,8 @@
 }
 
 .degradado {  
-    background: rgb(4,0,139);
-background: linear-gradient(0deg, rgba(4,0,139,1) 8%, rgba(69,102,246,1) 100%);
+    background: rgb(14,0,120);
+    background: linear-gradient(0deg, rgba(14,0,120,1) 6%, rgba(55,28,192,1) 100%);
 
 }
 
@@ -41,7 +41,7 @@ background: linear-gradient(0deg, rgba(4,0,139,1) 8%, rgba(69,102,246,1) 100%);
 }
 
 header {
-    background-color: #04008b;
+    background-color: #0e0078;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -87,4 +87,115 @@ section {
 
 .dropdown-content a:hover {
     background-color: #555;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid #001f3f; /* Borde azul marino */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.icono {
+    width: 64px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 400px; /* Establece el ancho máximo */
+    width: 100%; /* Garantiza que ocupe el 100% del contenedor padre */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    margin: 40px auto 0; /* Centra el contenedor horizontalmente y agrega espacio en la parte superior */
+    position: relative; /* Establece la posición relativa para contener el degradado animado */
+}
+
+
+.animate-bg:before, .animate-bg:after {
+    border-radius: 10px;
+	content: '';
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	background: linear-gradient(120deg,#031ba5, #00c3ff);
+	background-size: 300%;
+	width: calc(100% + 16px);
+	height: calc(100% + 16px);
+	z-index: -1;
+	animation: BGgradient 15s ease infinite; 
+}
+
+@keyframes BGgradient {
+	0% {
+		background-position: 0% 200%;
+	}
+	50% {
+		background-position: 200% 0%;
+	}
+	100% {
+		background-position: 0% 330%;
+	}
+}
+
+.animate-bg:after {
+
+	filter: brightness(1.4);
+	filter: drop-shadow(16px 16px 20px rgb(213, 97, 248));
+	filter: blur(10px);
+}
+
+
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    position: relative;
+}
+
+.login-container .icono {
+    position: absolute;
+    top: 50%; /* Coloca la imagen en el centro vertical del h2 */
+    left: 30px; /* Ajusta la posición izquierda de la imagen según sea necesario */
+    transform: translateY(-50%); /* Centra verticalmente la imagen */
+    width: 54px; /* Establece el ancho de la imagen según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.login-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #2980b9;
 }
